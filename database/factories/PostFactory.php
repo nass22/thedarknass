@@ -17,7 +17,13 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->words(3,true),
+            'content' => $this->faker->paragraphs($nb = 8, $asText = true),
+            'language'=> 'PHP, MySQL, React',
+            'teamwork'=> false,
+            'url_demo'=> 'www.google.be',
+            'user_id'=> 1,
+            'image'=>'img.png'
         ];
     }
 }

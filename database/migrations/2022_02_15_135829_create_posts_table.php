@@ -16,6 +16,13 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('title');
+            $table->text('content');
+            $table->string('language');
+            $table->boolean('teamwork')->default(false);
+            $table->string('url_demo')->nullable();
+            $table->foreignId('user_id')->constrained();
+            $table->string('image');
         });
     }
 
