@@ -20,7 +20,9 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [PostController::class, 'index']);
 
-Route::get('/post/{id}', [PostController::class, 'getPost']);
+Route::get('/project/{id}', [PostController::class, 'getPost']);
+
+Route::get('/projects', [PostController::class, 'getAllPosts']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

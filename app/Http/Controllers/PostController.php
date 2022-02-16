@@ -8,12 +8,19 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        return view('front.index', ['posts'=>Post::all()]); 
+        $posts=Post::all()->sortByDesc('id')->take(3);
+        // return view('front.index', ['posts'=>Post::all()]); 
+        return view('front.index', compact('posts')); 
     }
 
     public function getPost($id){
         $post=Post::find($id);
         return view('front.project', compact('post'));
+    }
+
+    public function getAllPosts(){
+        $posts=Post::all();
+        return view('front.projects', compact('posts'));
     }
      
 }

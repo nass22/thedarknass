@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>{{$post->title}} - The Dark Nass</title>
+    <title>@yield('title') - The Dark Nass</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -17,11 +17,12 @@
     ================================================== -->
     <link rel="stylesheet" href="{{ asset('css/vendor.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
     <!-- script
     ================================================== -->
-    <script src="{{ asset('../js/modernizr.js') }}"></script>
     <script defer src="{{ asset('js/fontawesome/all.min.js') }}"></script>
+    @yield('mediaqueries')
 
     <!-- favicons
     ================================================== -->
@@ -59,7 +60,7 @@
 
                 <ul class="s-header__nav">
                     <li><a href="/" title="">Home</a></li>
-                    <li><a href="styles.html" title="">Projets</a></li>
+                    <li><a href="/projects" title="">Projects</a></li>
                     <li><a href="about.html" title="">About</a></li>
                     <li><a href="contact.html" title="">Contact</a></li>
                 </ul> <!-- end s-header__nav -->

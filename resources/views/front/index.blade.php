@@ -1,5 +1,9 @@
 @extends('front.layoutIndex')
 
+@section('title')
+    Home
+@endsection
+
 @section('hero')
 
 <section id="hero" class="s-hero">
@@ -23,13 +27,11 @@
     </div> <!-- end s-hero__slider -->
 
     <div class="s-hero__social hide-on-mobile-small">
-        <p>MY LINKS</p>
+        <p>FOLLOW ME</p>
         <span></span>
         <ul class="s-hero__social-icons">
-            <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-            <li><a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-            <li><a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a></li>
+            <li><a href="#0"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#0"><i class="fab fa-github" aria-hidden="true"></i></a></li>
         </ul>
     </div> <!-- end s-hero__social -->
 
@@ -52,7 +54,7 @@
 <!-- masonry
         ================================================== -->
         <div class="s-bricks">
-            <h1 style="padding-left:4rem;padding-bottom:5rem;">Mes derniers projets</h1>
+            <h1 style="padding-left:4rem; padding-bottom:5rem; padding-top: 2rem; font-size:50px;">Mes derniers projets</h1>
 
             <div class="masonry">
                 <div class="bricks-wrapper h-group">
@@ -69,7 +71,7 @@
                     <article class="brick entry" data-aos="fade-up">
     
                         <div class="entry__thumb">
-                            <a href="single-standard.html" class="thumb-link">
+                            <a href="project/{{$post->id}}" class="thumb-link">
                                 <img src="images/thumbs/masonry/tulips-600.jpg" 
                                      srcset="images/thumbs/masonry/tulips-600.jpg 1x, images/thumbs/masonry/tulips-1200.jpg 2x" alt="">
                             </a>
@@ -77,7 +79,7 @@
                     
                         <div class="entry__text">
                             <div class="entry__header">
-                                <h1 class="entry__title"><a href="single-standard.html">{{$post->title}}</a></h1>
+                                <h1 class="entry__title"><a>{{$post->title}}</a></h1>
                                 
                                 <div class="entry__meta">
                                     <span class="byline" style="padding-top: 1rem;">Language:
@@ -89,9 +91,9 @@
                                 </div>
                             </div>
                             <div class="entry__excerpt">
-                                <p>{{$post->content}}</p>
+                                <p>{{Str::limit($post->content, 100)}}</p>
                             </div>
-                            <a class="entry__more-link" href="#0">Read More</a>
+                            <a class="entry__more-link" href="/project/{{$post->id}}">Read More</a>
                         </div> <!-- end entry__text -->
                     
                     </article> <!-- end article -->

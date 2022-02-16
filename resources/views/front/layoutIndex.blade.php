@@ -17,6 +17,7 @@
     ================================================== -->
     <link rel="stylesheet" href="{{ asset('css/vendor.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- script
     ================================================== -->
@@ -59,7 +60,7 @@
 
                 <ul class="s-header__nav">
                     <li class="current"><a href="#" title="">Home</a></li>
-                    <li><a href="styles.html" title="">Projects</a></li>
+                    <li><a href="/projects" title="">Projects</a></li>
                     <li><a href="about.html" title="">About</a></li>
                     <li><a href="contact.html" title="">Contact</a></li>
                 </ul> <!-- end s-header__nav -->
