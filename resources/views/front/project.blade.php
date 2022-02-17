@@ -58,7 +58,13 @@
                             <div class="entry-cat-links meta-blk">
                                 <div class="cat-links">
                                     <span>TeamWork</span> 
-                                    <a href="#0">{{$post->teamwork}}</a>
+                                    <a href="#0">
+                                    @if($post->teamwork === 0)
+                                    No
+                                    @else
+                                    Yes
+                                    @endif
+                                </a>
                                 </div>
                             </div>
                         </div>

@@ -24,6 +24,14 @@ Route::get('/project/{id}', [PostController::class, 'getPost']);
 
 Route::get('/projects', [PostController::class, 'getAllPosts']);
 
+Route::get('/about', function (){
+    return view('front.about');
+});
+
+Route::get('/contact', function (){
+    return view('front.contact');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
